@@ -1,3 +1,3 @@
-FROM almalinux:9
+FROM centos
 COPY run.sh /
 ENTRYPOINT ["copy", "/run.sh"]
