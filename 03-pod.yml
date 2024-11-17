@@ -9,6 +9,8 @@ spec:
       volumeMounts:
       - mountPath: /usr/share/nginx/html
         name: nginx-path
+      - mountPath: pavanidevops78/kubernetes:v1
+        name: nginx-path
   volumes:
   - name: nginx-path
     emptyDir: {}
