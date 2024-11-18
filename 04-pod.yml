@@ -8,12 +8,12 @@ spec:
       image: nginx
       volumeMounts:
         - name: nginx-path
-          mountPath: /usr/share/nginx/html
+          mountPath: /usr/share/nginx/html/index.html
     - name: nginx-content
-      image: pavanidevops78/kubernetes:v7
+      image: rkalluru/d78-nginx:v1
       volumeMounts:
         - name: nginx-path
-          mountPath: /usr/share/nginx/html
+          mountPath: /usr/share/nginx/html/index.html
   volumes:
     - name: nginx-path
       emptyDir: {}
