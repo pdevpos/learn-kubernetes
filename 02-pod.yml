@@ -8,3 +8,10 @@ spec:
       image: nginx
     - name: nginx-content
       image: pavanidevops78/kubernetes:v3
+      volumeMounts:
+        - name: my-volume
+          mountPath: /usr/share/nginx/html/sample.html
+
+
+
+
