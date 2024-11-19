@@ -7,15 +7,15 @@ spec:
     - name: nginx
       image: nginx
       volumeMounts:
-        - name: nginx
+        - name: nginx-path
           mountPath: /usr/share/nginx/html
   containers:
     - name: nginx-content
       image: pavanidevops78/kubernetes:v3
       volumeMounts:
-        - name: nginx-content
+        - name: nginx-path
           mountPath: /usr/share/nginx/html
 
   volumes:
-    - name: nginx-content
+    - name: nginx-path
       emptyDir: {}
