@@ -10,7 +10,7 @@ spec:
       image: pavanidevops78/kubernetes:v3
       volumeMounts:
         - name: nginx-content
-          mountPath: /usr/share/nginx/html/sample.html
+          mountPath: /usr/share/nginx/html/
 
 
 
