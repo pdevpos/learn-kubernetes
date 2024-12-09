@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: example-configmap
+  name: pod-06
 data:
   USERNAME: "demo"
   PASSWORD: "demo123"
