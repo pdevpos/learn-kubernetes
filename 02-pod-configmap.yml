@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-configmap
+spec:
+  containers:
+  - name: nginx
+    image: nginx
+    env:
+    - name: USERNAME
+      valueFrom:
+        configMapKeyRef:
+          name: example-configmap
+          key: USERNAME
+    - name: PASSWORD
+      valueFrom:
+        configMapKeyRef:
+          name: example-configmap
+          key: PASSWORD
