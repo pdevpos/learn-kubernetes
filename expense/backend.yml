@@ -3,9 +3,9 @@ kind: Pod
 metadata:
   name: backend-vault
 spec:
-  initContainers:
-    - name: vault
-      image: 041445559784.dkr.ecr.us-east-1.amazonaws.com/vault-init-container:v1
+#  initContainers:
+#    - name: vault
+#      image: 041445559784.dkr.ecr.us-east-1.amazonaws.com/vault-init-container:v1
 
   containers:
     - name: backend
