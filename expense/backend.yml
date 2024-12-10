@@ -19,8 +19,8 @@ spec:
         - name: VAULT_SKIP_VERIFY
           value: "TRUE"
   containers:
-    - name: nginx
-      image: nginx
+    - name: vault
+      image: pavanidevops78/kubernetes:i1
 
 
 
