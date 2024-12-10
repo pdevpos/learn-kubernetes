@@ -6,6 +6,9 @@ spec:
   containers:
     - name: nginx
       image: nginx
+      volumeMounts:
+        - name: nginx-path
+          mountPath: /usr/share/nginx/html
   initContainers:
     - name: image-content
       image: pavanidevops78/kubernetes:i1
