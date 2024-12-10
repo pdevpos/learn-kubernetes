@@ -5,7 +5,7 @@ metadata:
 spec:
   initContainers:
     - name: vault
-      image: 041445559784.dkr.ecr.us-east-1.amazonaws.com/vault-init-container:v2
+      image: 041445559784.dkr.ecr.us-east-1.amazonaws.com/vault-init-container:v1
       env:
         - name: VAULT_ADDR
           value: https://54.91.44.61:8200/
