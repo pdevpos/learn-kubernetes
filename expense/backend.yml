@@ -19,8 +19,9 @@ spec:
         - name: VAULT_SKIP_VERIFY
           value: "TRUE"
   containers:
-    - name: nginx
-      image: nginx
+    - name: backend
+      image: 041445559784.dkr.ecr.us-east-1.amazonaws.com/expense-backend:v1
+
 
 
 
