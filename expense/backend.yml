@@ -18,5 +18,9 @@ spec:
           value: common/backend
         - name: VAULT_SKIP_VERIFY
           value: "TRUE"
+  containers:
+    - name: nginx
+      image: nginx
+
 
 
