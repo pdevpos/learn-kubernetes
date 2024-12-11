@@ -3,9 +3,13 @@ kind: Pod
 metadata:
   name: backend-vault
 spec:
+  volumes:
+  - name: secrets
+    emptyDir:
+        sizeLimit: 5Mi
   initContainers:
     - name: vault
-      image: 041445559784.dkr.ecr.us-east-1.amazonaws.com/vault-init-container:v1
+      image:  041445559784.dkr.ecr.us-east-1.amazonaws.com/vault-init-container:v1
       env:
         - name: VAULT_ADDR
           value: https://54.227.58.60:8200/
