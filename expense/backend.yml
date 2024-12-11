@@ -29,7 +29,7 @@ spec:
 
   containers:
     - name: backend
-      image: 041445559784.dkr.ecr.us-east-1.amazonaws.com/expense-backend:v1
+      image: public.ecr.aws/u4j6q5s8/expense-backend:v1
       volumeMounts:
         - mountPath: /data
           name: vault
