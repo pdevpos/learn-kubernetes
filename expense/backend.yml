@@ -13,7 +13,7 @@ spec:
       valueFrom:
         secretKeyRef:
          name: vault-token
-         key: token
+         key: "token"
     - name: SECRET_NAME
       value: common/backend
     - name: VAULT_SKIP_VERIFY
