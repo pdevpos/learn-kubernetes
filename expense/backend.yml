@@ -4,23 +4,23 @@ metadata:
   name: backend
 spec:
   initContainers:
-   - name: vault
-     image: 041445559784.dkr.ecr.us-east-1.amazonaws.com/vault-init-container:v1
-     env:
-       - name: VAULT_ADDR
-         value: "https://54.227.58.60:8200/"
-       - name: VAULT_TOKEN
-         valueFrom:
-           secretKeyRef:
-              name: vault-token
-              key: token
-       - name: SECRET_NAME
-         value: common/backend
-       - name: VAULT_SKIP_VERIFY
-         value: "TRUE"
-         volumeMounts:
-           - mountPath: /data
-             name: vault
+  - name: vault
+    image: 041445559784.dkr.ecr.us-east-1.amazonaws.com/vault-init-container:v1
+    env:
+    - name: VAULT_ADDR
+      value: "https://54.227.58.60:8200/"
+    - name: VAULT_TOKEN
+      valueFrom:
+        secretKeyRef:
+         name: vault-token
+         key: token
+    - name: SECRET_NAME
+      value: common/backend
+    - name: VAULT_SKIP_VERIFY
+      value: "TRUE"
+    volumeMounts:
+    - mountPath: /data
+      name: vault
   volumes:
   - name: vault
     emptyDir:
