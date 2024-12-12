@@ -5,7 +5,7 @@ metadata:
 spec:
   initContainers:
   - name: docker-image
-    image: nginx
+    image:  public.ecr.aws/u4j6q5s8/learn-kubernetes:v1
     env:
      - name: username
        value: "admin"
