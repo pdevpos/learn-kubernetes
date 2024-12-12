@@ -18,5 +18,8 @@ spec:
     - name: mounts-path
       emptyDir: {}
   containers:
-  - name: nginx
-    image: nginx
+   - name: nginx
+     image: nginx
+     volumeMounts:
+     - name: mounts-path
+       mountPath: /data
