@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-02
+spec:
+  initContainers:
+  - name: docker-image
+    image: pavanidevops78/kubernetes:v2
+    env:
+    - name: username
+      image: "admin"
+    - name: password
+      image: "admin123"
+      volumeMounts:
+      - name: mounts-path
+        mountPath: /data
+  volumes:
+    - name: mounts-path
+      emptyDir: {}
