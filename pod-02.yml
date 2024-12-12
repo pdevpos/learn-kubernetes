@@ -17,3 +17,6 @@ spec:
   volumes:
     - name: mounts-path
       emptyDir: {}
+  containers:
+  - name: nginx
+    image: nginx
