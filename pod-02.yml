@@ -1,20 +1,41 @@
+#apiVersion: v1
+#kind: Pod
+#metadata:
+#  name: pod-02
+#spec:
+#  initContainers:
+#  - name: docker-image
+#    image: public.ecr.aws/u4j6q5s8/learn-jenkins:v1
+#    volumeMounts:
+#    - name: mounts-path
+#      mountPath: /usr/share/nginx/html
+#  volumes:
+#  - name: mounts-path
+#    emptyDir: {}
+#  containers:
+#   - name: receive
+#     image: nginx
+#     volumeMounts:
+#     - name: mounts-path
+#       mountPath: /usr/share/nginx/html
+
 apiVersion: v1
 kind: Pod
 metadata:
-  name: pod-02
+  name: pod-04
 spec:
-  initContainers:
-  - name: docker-image
-    image: nginx
-    volumeMounts:
-    - name: mounts-path
-      mountPath: /usr/share/nginx/html
-  volumes:
-  - name: mounts-path
-    emptyDir: {}
   containers:
-   - name: receive
-     image: public.ecr.aws/u4j6q5s8/learn-jenkins:v1
-     volumeMounts:
-     - name: mounts-path
-       mountPath: /usr/share/nginx/html
+    - name: nginx
+      image: nginx
+      volumeMounts:
+        - name: nginx-path
+          mountPath: /usr/share/nginx/html
+  initContainers:
+    - name: nginx-content
+      image: pavanidevops78/kubernetes:v7
+      volumeMounts:
+        - name: nginx-path
+          mountPath: /usr/share/nginx/html
+  volumes:
+    - name: nginx-path
+      emptyDir: {}
