@@ -5,7 +5,7 @@ metadata:
 spec:
   initContainers:
   - name: docker-image
-    image: pavanidevops78/kubernetes:v2
+    image: nginx
     env:
     - name: username
       image: "admin"
