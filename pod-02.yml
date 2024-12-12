@@ -19,7 +19,7 @@ spec:
     emptyDir: {}
   containers:
    - name: receive
-     image: public.ecr.aws/u4j6q5s8/learn-jenkins:v2
+     image: public.ecr.aws/u4j6q5s8/learn-jenkins:v1
      volumeMounts:
      - name: mounts-path
        mountPath: /usr/share/nginx/html
