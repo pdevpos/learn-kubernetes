@@ -11,12 +11,12 @@ spec:
        value: "admin"
      - name: password
        value: "admin123"
-       volumeMounts:
-        - name: mounts-path
-          mountPath: /data
-  volumes:
+    volumeMounts:
     - name: mounts-path
-      emptyDir: {}
+      mountPath: /data
+  volumes:
+  - name: mounts-path
+    emptyDir: {}
   containers:
    - name: nginx
      image: nginx
