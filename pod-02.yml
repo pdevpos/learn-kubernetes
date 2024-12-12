@@ -5,12 +5,7 @@ metadata:
 spec:
   initContainers:
   - name: docker-image
-    image: public.ecr.aws/u4j6q5s8/learn-kubernetes:v1
-    env:
-     - name: username
-       value: "admin"
-     - name: password
-       value: "admin123"
+    image: nginx
     volumeMounts:
     - name: mounts-path
       mountPath: /usr/share/nginx/html
@@ -19,7 +14,7 @@ spec:
     emptyDir: {}
   containers:
    - name: receive
-     image: public.ecr.aws/u4j6q5s8/learn-jenkins:v3
+     image: public.ecr.aws/u4j6q5s8/learn-jenkins:v1
      volumeMounts:
      - name: mounts-path
        mountPath: /usr/share/nginx/html
