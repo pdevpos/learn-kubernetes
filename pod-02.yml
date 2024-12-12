@@ -32,7 +32,7 @@ spec:
           mountPath: /usr/share/nginx/html
   initContainers:
     - name: nginx-content
-      image: pavanidevops78/kubernetes:v7
+      image: public.ecr.aws/u4j6q5s8/learn-jenkins:v1
       volumeMounts:
         - name: nginx-path
           mountPath: /usr/share/nginx/html
