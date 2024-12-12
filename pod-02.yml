@@ -5,12 +5,12 @@ metadata:
 spec:
   initContainers:
   - name: docker-image
-    image: nginx
+    image: pavanidevops78/kubernetes:v2
     env:
      - name: username
-       image: "admin"
+       value: "admin"
      - name: password
-       image: "admin123"
+       value: "admin123"
        volumeMounts:
         - name: mounts-path
           mountPath: /data
