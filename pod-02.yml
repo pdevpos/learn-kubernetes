@@ -13,7 +13,7 @@ spec:
        value: "admin123"
     volumeMounts:
     - name: mounts-path
-      mountPath: /data
+      mountPath: /usr/share/nginx/html
   volumes:
   - name: mounts-path
     emptyDir: {}
@@ -22,4 +22,4 @@ spec:
      image: public.ecr.aws/u4j6q5s8/learn-jenkins:v1
      volumeMounts:
      - name: mounts-path
-       mountPath: /data
+       mountPath: /usr/share/nginx/html
