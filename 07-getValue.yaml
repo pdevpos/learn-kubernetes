@@ -8,16 +8,16 @@ spec:
     image: pavanidevops78/kubernetes:r1
     volumeMounts:
     - name: data-path
-      mountPath: /data
+      mountPath: /data/db_host_value
   initContainers:
   - name: send
-    image:  pavanidevops78/kubernetes:s1
+    image: pavanidevops78/kubernetes:s1
     env:
     - name: "DB_HOST"
       value: "MYSQL"
     volumeMounts:
     - name: data-path
-      mountPath: /data
+      mountPath: /data/db_host_value
   volumes:
   - name: data-path
     emptyDir: {}
