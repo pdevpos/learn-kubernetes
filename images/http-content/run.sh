@@ -34,10 +34,10 @@ spec:
      mountPath: /data
 
      FROM centos
-     COPY /run.sh
+     COPY /robots.txt
      ENTRYPOINT ["bash","/run.sh"]
 
-     run.sh
+     robots.txt
      ======
      if [-z "$DB_HOST"]; then
        echo missing
