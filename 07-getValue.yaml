@@ -5,7 +5,7 @@ metadata:
 spec:
   containers:
   - name: receive
-    image: pavanidevops78/kubernetes:r3
+    image: pavanidevops78/kubernetes:r4
     volumeMounts:
     - name: data-path
       mountPath: /data
