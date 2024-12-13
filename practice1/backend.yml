@@ -11,7 +11,7 @@ spec:
          value: "https://54.80.29.0:8200/"
        - name: VAULT_TOKEN
          valueFrom:
-           secretRefKey:
+           secretKeyRef:
              name: vault-token
              key: token
        - name: SECRET_NAME
@@ -29,3 +29,6 @@ spec:
      volumeMounts:
        - name: vault-path
          mountPath: /data
+
+
+
