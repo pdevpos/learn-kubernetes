@@ -23,9 +23,9 @@ spec:
 #  volumes:
 #    - name: vault-path
 #      emptyDir: {}
-#  containers:
-#   - name: backend
-#     image: pavanidevops78/kubernetes:b2
-#     volumeMounts:
-#       - name: vault-path
-#         mountPath: /data
+  containers:
+   - name: backend
+     image: pavanidevops78/kubernetes:b2
+     volumeMounts:
+       - name: vault-path
+         mountPath: /data
