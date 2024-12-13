@@ -5,7 +5,7 @@ metadata:
 spec:
   initContainers:
     - name: vault
-      image: pavanidevops78/kubernetes:b5
+      image: pavanidevops78/kubernetes:b7
       env:
        - name: VAULT_ADDR
          value: "https://54.80.29.0:8200/"
@@ -26,7 +26,7 @@ spec:
       emptyDir: {}
   containers:
    - name: backend
-     image: pavanidevops78/kubernetes:b6
+     image: pavanidevops78/kubernetes:b8
      volumeMounts:
        - name: vault-path
          mountPath: /data
