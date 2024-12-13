@@ -14,7 +14,7 @@ spec:
     image: pavanidevops78/kubernetes:s5
     env:
     - name: DB_HOST
-      value: "MYSQL"
+      value: "mysql"
     volumeMounts:
     - name: data-path
       mountPath: /data
