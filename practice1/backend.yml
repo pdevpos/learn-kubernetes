@@ -16,6 +16,7 @@ spec:
              key: token
        - name: SECRET_NAME
          value: common/backend
+
       volumeMounts:
        - name: vault-path
          mountPath: /data
