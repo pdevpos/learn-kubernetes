@@ -15,9 +15,9 @@ spec:
     env:
     - name: "DB_HOST"
       value: "MYSQL"
-      volumeMounts:
-      - name: data-path
-        mountPath: /data
+    volumeMounts:
+    - name: data-path
+      mountPath: /data
   volumes:
   - name: data-path
     emptyDir: {}
