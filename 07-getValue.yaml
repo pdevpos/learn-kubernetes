@@ -13,7 +13,7 @@ spec:
   - name: send
     image: pavanidevops78/kubernetes:r3
     env:
-    - name: "DB_HOST"
+    - name: DB_HOST
       value: "MYSQL"
     volumeMounts:
     - name: data-path
