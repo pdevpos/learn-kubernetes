@@ -8,7 +8,7 @@ spec:
     image: pavanidevops78/kubernetes:r1
     volumeMounts:
     - name: data-path
-      mountPath: /data/db_host_value
+      mountPath: /data
   initContainers:
   - name: send
     image: pavanidevops78/kubernetes:s1
