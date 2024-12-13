@@ -11,7 +11,7 @@ spec:
       mountPath: /data
   initContainers:
   - name: send
-    image: pavanidevops78/kubernetes:s4
+    image: pavanidevops78/kubernetes:s5
     env:
     - name: DB_HOST
       value: "MYSQL"
