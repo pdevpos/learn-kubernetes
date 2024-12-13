@@ -5,13 +5,13 @@ metadata:
 spec:
   containers:
   - name: receive
-    image: public.ecr.aws/u4j6q5s8/receive-db:v1
+    image: pavanidevops78/kubernetes:r1
     volumeMounts:
     - name: data-path
       mountPath: /data
   initContainers:
   - name: send
-    image: public.ecr.aws/u4j6q5s8/dend-db:v1
+    image:  pavanidevops78/kubernetes:s1
     env:
     - name: "DB_HOST"
       value: "MYSQL"
