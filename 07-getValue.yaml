@@ -5,13 +5,13 @@ metadata:
 spec:
   containers:
   - name: receive
-    image: pavanidevops78/kubernetes:r3
+    image: pavanidevops78/kubernetes:r8
     volumeMounts:
     - name: data-path
       mountPath: /data
   initContainers:
   - name: send
-    image: pavanidevops78/kubernetes:s2
+    image: pavanidevops78/kubernetes:s3
     env:
     - name: DB_HOST
       value: "MYSQL"
