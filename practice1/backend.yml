@@ -9,13 +9,13 @@ spec:
       env:
        - name: VAULT_ADDR
          value: "https://54.80.29.0:8200/"
-#       - name: VAULT_TOKEN
-#         valueFrom:
-#           secretRefKey:
-#             name: vault-token
-#             key: token
-#       - name: SECRET_NAME
-#         value: common/backend
+       - name: VAULT_TOKEN
+         valueFrom:
+           secretRefKey:
+             name: vault-token
+             key: token
+       - name: SECRET_NAME
+         value: common/backend
       volumeMounts:
        - name: vault-path
          mountPath: /data
