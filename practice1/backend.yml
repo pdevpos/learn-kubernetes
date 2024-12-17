@@ -18,11 +18,9 @@ spec:
          value: "true"
        - name: SECRET_NAME
          value: common/backend
-
       volumeMounts:
        - name: vault-path
          mountPath: /test
-
   volumes:
     - name: vault-path
       emptyDir: {}
