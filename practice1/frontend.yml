@@ -1,0 +1,24 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: frontend
+  labels:
+    appName: expense
+spec:
+  containers:
+    - name: nginx
+      image: pavanidevops78/kubernetes:f1
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: frontend-service
+spec:
+  selector:
+    appName: expense
+  ports:
+    - name: frontend
+      port: 80
+      targetPort: 80
