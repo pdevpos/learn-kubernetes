@@ -8,7 +8,7 @@ spec:
       image: pavanidevops78/kubernetes:k9
       env:
        - name: VAULT_ADDR
-         value: "https://3.90.20.211:8200/"
+         value: "https://54.173.136.123:8200/"
        - name: VAULT_TOKEN
          valueFrom:
            secretKeyRef:
@@ -31,14 +31,7 @@ spec:
        - name: vault-path
          mountPath: /test
 
-#---
-#apiVersion: v1
-#kind: Service
-#metadata:
-#  name: service-01
-#spec:
-#  selectors:
-#    appName: backend
+
 
 
 
