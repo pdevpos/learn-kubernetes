@@ -14,6 +14,8 @@ spec:
            secretKeyRef:
              name: vault-token
              key: token
+       - name: VAULT_SKIP_VERIFY
+         value: "true"
        - name: SECRET_NAME
          value: common/backend
 
