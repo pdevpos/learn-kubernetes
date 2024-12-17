@@ -21,7 +21,7 @@ spec:
 
       volumeMounts:
        - name: vault-path
-         mountPath: /data
+         mountPath: /test
 
   volumes:
     - name: vault-path
@@ -31,7 +31,7 @@ spec:
      image: pavanidevops78/kubernetes:k7
      volumeMounts:
        - name: vault-path
-         mountPath: /data
+         mountPath: /test
 
 #---
 #apiVersion: v1
