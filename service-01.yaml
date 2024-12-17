@@ -18,7 +18,7 @@ spec:
     appName: nginx
   ports:
     - name: nginx
-      protocol: http
+      protocol: TCP
       port: 80
       targetPort: 8080
 
