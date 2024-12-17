@@ -42,9 +42,10 @@ spec:
   selector:
     appName: expense
   ports:
-    port: 80
-    protocol: TCP
-    targetPort: 8080
+   - name: backend
+     port: 80
+     protocol: TCP
+     targetPort: 8080
 
 
 
