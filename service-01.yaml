@@ -15,7 +15,7 @@ metadata:
   name: service-01
 spec:
   selectors:
-    appName: appName
+    appName: nginx
   ports:
     - name: nginx
       protocol: http
