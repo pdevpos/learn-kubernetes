@@ -26,7 +26,7 @@ spec:
       emptyDir: {}
   containers:
    - name: backend
-     image: pavanidevops78/kubernetes:k3
+     image: nginx
      volumeMounts:
        - name: vault-path
          mountPath: /data
