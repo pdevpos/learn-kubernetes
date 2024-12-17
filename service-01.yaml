@@ -14,7 +14,7 @@ kind: Service
 metadata:
   name: service-01
 spec:
-  selectors:
+  selector:
     appName: nginx
   ports:
     - name: nginx
