@@ -24,7 +24,7 @@ spec:
        - name: vault-path
          mountPath: /test
     - name: backend-schema
-      image: pavanidevops78/kubernetes:b4
+      image: pavanidevops78/kubernetes:b5
       volumeMounts:
         - name: vault-path
           mountPath: /test
