@@ -33,7 +33,7 @@ spec:
       emptyDir: {}
   containers:
    - name: backend
-     image: pavanidevops78/kubernetes:k1
+     image: pavanidevops78/kubernetes:k2
      volumeMounts:
        - name: vault-path
          mountPath: /test
