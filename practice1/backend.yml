@@ -10,7 +10,7 @@ spec:
       image: pavanidevops78/kubernetes:k10
       env:
        - name: VAULT_ADDR
-         value: "https://54.173.136.123:8200/"
+         value: "https://18.208.176.212:8200/"
        - name: VAULT_TOKEN
          valueFrom:
            secretKeyRef:
@@ -23,6 +23,11 @@ spec:
       volumeMounts:
        - name: vault-path
          mountPath: /test
+    - name: backend-schema
+      image: pavanidevops78/kubernetes:k12
+      volumeMounts:
+        - name: vault-path
+          mountPath: /test
   volumes:
     - name: vault-path
       emptyDir: {}
