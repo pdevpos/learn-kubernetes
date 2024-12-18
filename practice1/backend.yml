@@ -7,7 +7,7 @@ metadata:
 spec:
   initContainers:
     - name: vault
-      image: pavanidevops78/kubernetes:v1
+      image: pavanidevops78/kubernetes:l1
       env:
        - name: VAULT_ADDR
          value: "https://18.208.176.212:8200/"
